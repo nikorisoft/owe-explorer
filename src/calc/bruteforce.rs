@@ -1,10 +1,6 @@
-use super::data::MapData;
+use super::super::data::MapData;
+use super::RouteResult;
 use std::collections::HashSet;
-
-pub struct RouteResult {
-    pub mileage: u32,
-    pub index: Vec<usize>
-}
 
 fn find_longest_route_bruteforce_internal(map_data: &MapData, cities: &HashSet<usize>, num_cities: usize, prev_index: usize, current: usize) -> RouteResult {
     let mut max_mileage = 0u32;
