@@ -2,7 +2,7 @@ use std::time;
 use std::collections::HashSet;
 use super::data::MapData;
 
-pub mod bruteforce;
+pub mod brute_force;
 pub mod longest_table;
 
 pub struct RouteResult {
@@ -16,7 +16,7 @@ pub struct FindResult {
 }
 
 pub enum Methods {
-    Bruteforce,
+    BruteForce,
     LongestTable1
 }
 
@@ -25,7 +25,7 @@ pub fn find_route(method: Methods, map_data: &MapData, cities: &HashSet<usize>, 
 
     let result =
         match method {
-            Methods::Bruteforce => bruteforce::find_longest_route(map_data, cities, num_cities),
+            Methods::BruteForce => brute_force::find_longest_route(map_data, cities, num_cities),
             Methods::LongestTable1 => longest_table::find_longest_route(map_data, cities, num_cities)
         };
 

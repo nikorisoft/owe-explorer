@@ -26,7 +26,7 @@ fn main() {
             std::process::exit(1);
         } else {
             match args[1].as_str() {
-                "bruteforce" => calc::Methods::Bruteforce,
+                "bruteforce" => calc::Methods::BruteForce,
                 "table1" => calc::Methods::LongestTable1,
                 _ => panic!("Unknown method name: {}", args[1])
             }
