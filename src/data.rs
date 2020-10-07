@@ -6,7 +6,7 @@ use std::f64::consts::PI;
 use std::collections::HashMap;
 
 const RADIUS_MILE: f64 = 3958.756;
-const CLASS_MAG: f64 = 1.25;
+const CLASS_MUL: f64 = 1.25;
 
 #[derive(PartialEq)]
 pub enum Region {
@@ -140,21 +140,28 @@ impl MapData {
                 let r1 = MapData::region(&cities[i], &countries);
                 let r2 = MapData::region(&cities[j], &countries);
 
-                let mag = if r1 == Region::Japan && r1 == r2 {
+                let mul = if r1 == Region::Japan && r1 == r2 {
+                    // Japan domestic
                     2.0
                 } else if (r1 == Region::Japan && (r2 == Region::Asia || r2 == Region::Oceania)) ||
                     (r2 == Region::Japan && (r1 == Region::Asia || r1 == Region::Oceania)) {
-                    1.5
+                    if cities[i].country == "RU" || cities[j].country == "RU" {
+                        // Russia (East of Ural) is considered as Europe
+                        1.0
+                    } else {
+                        1.5
+                    }
                 } else {
                     1.0
                 };
+
                 let extra = if r1 == Region::Japan || r2 == Region::Japan {
                     400.0
                 } else {
                     0.0
                 };
 
-                row.push((City::calc_distance(&cities[i], &cities[j]) * mag * CLASS_MAG + extra).floor() as u32);
+                row.push((City::calc_distance(&cities[i], &cities[j]) * mul * CLASS_MUL + extra).floor() as u32);
             }
             mileage_table.push(row);
         }
