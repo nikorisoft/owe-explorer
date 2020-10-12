@@ -71,13 +71,16 @@ fn main() {
     println!("Cities: Asia = {}, Japan = {}, Europe = {}, NA = {}, SA = {}, Oceania = {}, Africa = {}", 
         asia.len(), japan.len(), europe.len(), north_america.len(), south_america.len(), oceania.len(), africa.len());
 
-    let mut num_cities = 5;
+    let num_cities = match area {
+        Area::NorthAmerica => 7,
+        _ => 5
+    };
     let city_set = match area {
         Area::All => asia,
         Area::Asia => asia,
         Area::Africa => africa,
         Area::Europe => europe,
-        Area::NorthAmerica => { num_cities = 7; north_america },
+        Area::NorthAmerica => north_america,
         Area::SouthAmerica => south_america,
         Area::Oceania => oceania,
         Area::Japan => japan
