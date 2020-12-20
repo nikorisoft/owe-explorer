@@ -1,0 +1,90 @@
+[
+    {
+        "city_code": "TYO",
+        "airports": ["HND", "NRT"]
+    },
+    {
+        "city_code": "NYC",
+        "airports": ["JFK", "LGA"]
+    },
+    {
+        "city_code": "LON",
+        "airports": ["LHR"]
+    },
+    {
+        "city_code": "AMM",
+        "airports": ["AMM"]
+    },
+    {
+        "city_code": "BNE",
+        "airports": ["BNE"]
+    },
+    {
+        "city_code": "CLT",
+        "airports": ["CLT"]
+    },
+    {
+        "city_code": "WAS",
+        "airports": ["DCA"]
+    },
+    {
+        "city_code": "DFW",
+        "airports": ["DFW"]
+    },
+    {
+        "city_code": "DOH",
+        "airports": ["DOH"]
+    },
+    {
+        "city_code": "HEL",
+        "airports": ["HEL"]
+    },
+    {
+        "city_code": "HKG",
+        "airports": ["HKG"]
+    },
+    {
+        "city_code": "CMB",
+        "airports": ["CMB"]
+    },
+    {
+        "city_code": "KUL",
+        "airports": ["KUL"]
+    },
+    {
+        "city_code": "LAX",
+        "airports": ["LAX"]
+    },
+    {
+        "city_code": "LON",
+        "airports": ["LHR"]
+    },
+    {
+        "city_code": "MAD",
+        "airports": ["MAD"]
+    },
+    {
+        "city_code": "MEL",
+        "airports": ["MEL"]
+    },
+    {
+        "city_code": "MIA",
+        "airports": ["MIA"]
+    },
+    {
+        "city_code": "CHI",
+        "airports": ["ORD"]
+    },
+    {
+        "city_code": "PHL",
+        "airports": ["PHL"]
+    },
+    {
+        "city_code": "PHX",
+        "airports": ["PHX"]
+    },
+    {
+        "city_code": "SYD",
+        "airports": ["SYD"]
+    }
+]
