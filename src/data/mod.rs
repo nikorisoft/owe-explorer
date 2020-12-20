@@ -60,7 +60,7 @@ impl City {
 
         d_sigma * RADIUS_MILE
     }
-    fn calc_point(from: &City, to: &City) -> u32 {
+    pub fn calc_point(from: &City, to: &City) -> u32 {
         let mul = if from.area == AreaCode::Japan && from.area == to.area {
             // Japan domestic
             2.0

@@ -20,5 +20,4 @@ download_fr24() {
     done
 }
 
-# download_fr24 hnd nrt hkg kul lhr hel mad doh amm syd mel bne clt ord dfw lax mia jfk lga phl phx dca
-download_fr24 cmb
+download_fr24 hnd nrt hkg kul lhr hel mad doh amm syd mel bne clt ord dfw lax mia jfk lga phl phx dca cmb
